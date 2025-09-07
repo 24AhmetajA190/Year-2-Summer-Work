@@ -206,12 +206,13 @@ def databaseSelectionHandler(connectionDetailsFilePath="connectionDetails.json",
     Within the function `databaseSelectionHandler` there is a variable declared under the name `databaseSelected`.
     This variable dictates the database that the results of any match are being written into:
     1) Postgres
+    2) SQLite
     If `databaseSelected` is not set to any of the values referred to above, then the program will automatically
     resort to DBeaver as its database. As of now, there is no option to modify this within the gradio application
     itself.
     """
 
-    databaseSelected = 1
+    databaseSelected = 2
 
     try:
         with open(connectionDetailsFilePath, "r") as file:
